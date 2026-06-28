@@ -328,7 +328,7 @@ function collectPredictionRows(){
 }
 
 async function savePredictions(){
-    if(!checkDeadline()) return alert('ปิดรับทายผลแล้วครับ เดดไลน์คือวันที่ 28 มิ.ย. 2026 เวลา 23:59 น.');
+    if(!checkDeadline()) return alert('ปิดรับทายผลแล้วครับ เดดไลน์คือวันที่ 29 มิ.ย. 2026 เวลา 23:59 น.');
     if(!currentUser) return alert('กรุณาเข้าสู่ระบบก่อนครับ');
     const rows = collectPredictionRows();
     if(rows.length === 0) return alert('กรุณากรอกสกอร์อย่างน้อย 1 คู่ และถ้าเสมอต้องเลือกทีมเข้ารอบด้วยครับ');
