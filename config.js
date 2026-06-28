@@ -38,7 +38,7 @@ const CONFIG = {
   supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFicWpvZ2ZmbGZuc2xkamtwaW9nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNzA5ODcsImV4cCI6MjA5NTY0Njk4N30.Gbi0Z814_hW5Z3nzaOr_icMRkguTGsziUbl_7Sy4zAU',
 
   adminPin: '556677',
-  predictionDeadline: '2026-06-29T23:59:59+07:00',
+  predictionDeadline: '2026-06-29T22:59:59+07:00',
   version: 'v12.1-config-loader-fix'
 };
 
