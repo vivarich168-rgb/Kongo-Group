@@ -1,3 +1,24 @@
+function formatThaiDeadlineText(){
+    try {
+        const el = document.getElementById('deadlineText');
+        if (!el || typeof CONFIG === 'undefined' || !CONFIG.predictionDeadline) return;
+
+        const d = new Date(CONFIG.predictionDeadline);
+        if (isNaN(d.getTime())) return;
+
+        const months = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+        const day = d.getDate();
+        const month = months[d.getMonth()];
+        const year = d.getFullYear();
+        const hh = String(d.getHours()).padStart(2, '0');
+        const mm = String(d.getMinutes()).padStart(2, '0');
+
+        el.innerText = `⏰ ปิดรับทายผลวันที่ ${day} ${month} ${year} เวลา ${hh}:${mm} น.`;
+    } catch (err) {
+        console.warn('formatThaiDeadlineText error:', err);
+    }
+}
+
 let currentUser = null;
 let layoutBuilt = false;
 
@@ -96,6 +117,7 @@ function applyBranding(){
     });
 
     document.title = titles.browserTitle || (siteName + ' | ' + eventName);
+    formatThaiDeadlineText();
 
     if (cfg.theme) {
         document.documentElement.style.setProperty('--gold', cfg.theme.primary || '#fbbf24');
@@ -426,3 +448,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     startCountdown();
     loadPublicStats();
 });
+
+
+document.addEventListener('DOMContentLoaded', () => { formatThaiDeadlineText(); });

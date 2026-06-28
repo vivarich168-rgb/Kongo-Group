@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prediction Platform</title>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <link rel="stylesheet" href="style.css?v=v12.1-config-loader-fix">
+  <link rel="stylesheet" href="style.css?v=v12.2-dynamic-deadline">
 
     <meta name="application-name" content="Prediction Platform">
     <meta name="apple-mobile-web-app-title" content="Prediction Platform">
@@ -32,7 +32,7 @@
     </section>
 
     <section class="countdown-wrap">
-      <div class="countdown-title">⏰ ปิดรับทายผลวันที่ 28 มิ.ย. 2026 เวลา 23:59 น.</div>
+      <div class="countdown-title"><span id="deadlineText">⏰ ปิดรับทายผล</span></div>
       <div class="countdown-card">
         <div class="countdown-box"><div class="countdown-num" id="cd-days">--</div><div class="countdown-label">วัน</div></div>
         <div class="countdown-box"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-label">ชั่วโมง</div></div>
@@ -109,8 +109,8 @@
 
   </main>
 
-  <script src="config.js?v=v12.1-config-loader-fix"></script>
-  <script src="supabase-config.js?v=v12.1-config-loader-fix"></script>
-  <script src="app.js?v=v12.1-config-loader-fix"></script>
+  <script src="config.js?v=v12.2-dynamic-deadline"></script>
+  <script src="supabase-config.js?v=v12.2-dynamic-deadline"></script>
+  <script src="app.js?v=v12.2-dynamic-deadline"></script>
 </body>
 </html>

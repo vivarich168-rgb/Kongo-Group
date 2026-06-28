@@ -1,16 +1,15 @@
-Kongo Prediction Platform V12.1 Config Loader Fix
+Kongo Prediction Platform V12.2 Dynamic Deadline
 
 แก้ไขสำคัญ:
-- บังคับให้ index.html และ admin.html โหลดไฟล์ตามลำดับ:
-  1) config.js
-  2) supabase-config.js
-  3) app.js
-- แก้ปัญหา CONFIG ไม่ถูกโหลด ทำให้กดเข้าระบบ/ทายผลไม่ได้
+- ข้อความวันปิดรับทายผลดึงจาก config.js อัตโนมัติ
+- ต่อไปเปลี่ยน predictionDeadline ใน config.js จุดเดียวพอ
 
-หลังอัปโหลด GitHub ให้เปิด:
+ตัวอย่าง:
+predictionDeadline: '2026-06-29T00:00:00+07:00',
+version: 'v12.2-dynamic-deadline'
 
-หน้าเว็บ:
-https://vivarich168-rgb.github.io/<repo-name>/?v=v12.1-config-loader-fix
+เปิดทดสอบ:
+https://vivarich168-rgb.github.io/Kongo-Group/?v=v12.2-dynamic-deadline
 
-หน้า Admin:
-https://vivarich168-rgb.github.io/<repo-name>/admin.html?v=v12.1-config-loader-fix
+Admin:
+https://vivarich168-rgb.github.io/Kongo-Group/admin.html?v=v12.2-dynamic-deadline
